@@ -1,1 +1,1 @@
-This will be my publishing folder 
+# 0x02. Unity - Scripting
