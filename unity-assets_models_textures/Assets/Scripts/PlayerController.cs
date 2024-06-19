@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     #region Fields
 
@@ -34,6 +34,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void HandleMovement()
     {
+        // Part 1: Horizontal Movement (Side-to-Side, Forward and Back)
         isGrounded = controller.isGrounded;
         if (isGrounded && velocity.y < 0)
         {
@@ -46,6 +47,7 @@ public class NewBehaviourScript : MonoBehaviour
         Vector3 move = transform.right * moveHorizontal + transform.forward * moveVertical;
         controller.Move(move * moveSpeed * Time.deltaTime);
 
+        // Part 2: Vertical Movement (Gravity and Jumping)
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
