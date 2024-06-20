@@ -9,16 +9,20 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpHeight = 3f;
     public float gravity = -30f;
-    public float rotateSpeed = 3000f;
-    public float fallThreshold = -10;
+    public float rotationSpeed = 10f;
+    public float fallThreshold = -10f;
+    public LayerMask groundMask; // Layers considered as ground
 
     public Transform respawnPoint;
 
     private CharacterController controller;
     private Vector3 velocity;
-    private bool isGrounded;
+    public bool isGrounded;
+    private BoxCollider groundCollider; // Reference to the BoxCollider for ground detection
+    private Camera mainCamera;
 
     #endregion
+
     #region Unity Methods
 
     // Start is called before the first frame update
@@ -31,11 +35,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandleMovement();
-        HandleRotation();
         CheckFellOffWorld();
     }
 
     #endregion
+
     #region Custom Methods
 
     private void InitializeGame()
@@ -43,39 +47,64 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Get the BoxCollider component
+        groundCollider = GetComponent<BoxCollider>();
+        if (groundCollider == null)
+        {
+            Debug.LogError("PlayerController: BoxCollider not found on the player GameObject.");
+        }
+
+        mainCamera = Camera.main; // Assuming your main camera is tagged as "MainCamera" in the scene
     }
+
     private void HandleMovement()
     {
-        // Check if the player is grounded & set velocity to avoid negative build up
-        isGrounded = controller.isGrounded;
+        // Perform a CheckBox to check if the player is grounded
+        isGrounded = Physics.CheckBox(groundCollider.bounds.center, groundCollider.bounds.extents, Quaternion.identity, groundMask);
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
-        // Get input for horizontal and vertical movement and calculate movement direction
+
+        // Get input for horizontal and vertical movement
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * moveHorizontal + transform.forward * moveVertical;
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        // Calculate movement direction relative to camera's forward direction
+        Vector3 camForward = mainCamera.transform.forward;
+        camForward.y = 0f; // Ignore vertical component to ensure movement stays on the ground
+        Vector3 moveDirection = (camForward * moveVertical + mainCamera.transform.right * moveHorizontal).normalized;
 
-        // Handle jumping & apply gravity
+        // Rotate player to face movement direction
+        if (moveDirection.magnitude > 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
+
+        // Move the player
+        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+
+        // Apply gravity
+        if (!isGrounded)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
+        else if (velocity.y < 0)
+        {
+            velocity.y = -2f; // Ensure grounded when moving downwards
+        }
+
+        // Jumping
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y += gravity * Time.deltaTime;
+        // Apply final movement with gravity
         controller.Move(velocity * Time.deltaTime);
-    }
-
-    private void HandleRotation()
-    {
-        // Get mouse input for rotation
-        float mouseX = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
-
-        // Rotate the player horizontally based on mouse movement
-        transform.Rotate(Vector3.up * mouseX);
     }
 
     private void FellOffWorld()
