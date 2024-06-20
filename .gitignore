@@ -70,3 +70,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Cinemachine specific exclusions
+/[Aa]ssets/[Cc]inemachine/Cache/
+/[Aa]ssets/[Cc]inemachine/Documentation/
+/[Aa]ssets/[Cc]inemachine/Examples/
+/[Aa]ssets/[Cc]inemachine/Editor/
+/[Aa]ssets/[Cc]inemachine/Temp/
