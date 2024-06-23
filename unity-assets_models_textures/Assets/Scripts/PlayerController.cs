@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("PlayerController: BoxCollider not found on the player GameObject.");
         }
 
-        mainCamera = Camera.main; // Assuming your main camera is tagged as "MainCamera" in the scene
+        mainCamera = Camera.main; // main camera is tagged as "MainCamera" in the scene
     }
 
     private void HandleMovement()
