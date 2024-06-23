@@ -6,10 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     #region Fields
 
-    public float moveSpeed = 5f;
-    public float jumpHeight = 3f;
+    public float moveSpeed = 7.5f;
+    public float jumpHeight = 4f;
     public float gravity = -30f;
-    public float rotationSpeed = 10f;
+    public float rotationSpeed = 30f;
     public float fallThreshold = -10f;
     public LayerMask groundMask; // Layers considered as ground
 
