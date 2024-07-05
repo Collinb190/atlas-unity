@@ -15,7 +15,7 @@ C:/Users/Lin/Unity Projects/atlas-unity/unity-assets_ui
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-49380
+49419
 Successfully changed project path to: C:/Users/Lin/Unity Projects/atlas-unity/unity-assets_ui
 C:/Users/Lin/Unity Projects/atlas-unity/unity-assets_ui
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Lin/Unity Projects/atlas-unity/unity-assets_ui
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [174072] Host "[IP] 192.168.0.63 [Port] 0 [Flags] 2 [Guid] 1977687835 [EditorId] 1977687835 [Version] 1048832 [Id] WindowsEditor(7,Sage) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [214452] Host "[IP] 192.168.0.63 [Port] 0 [Flags] 2 [Guid] 300744884 [EditorId] 300744884 [Version] 1048832 [Id] WindowsEditor(7,Sage) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [174072] Host "[IP] 192.168.0.63 [Port] 0 [Flags] 2 [Guid] 1977687835 [EditorId] 1977687835 [Version] 1048832 [Id] WindowsEditor(7,Sage) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [214452] Host "[IP] 192.168.0.63 [Port] 0 [Flags] 2 [Guid] 300744884 [EditorId] 300744884 [Version] 1048832 [Id] WindowsEditor(7,Sage) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 23 workers.
-Refreshing native plugins compatible for Editor in 4.00 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.24f1 (334eb2a0b267)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/Resources/UnitySubsystems
@@ -70,23 +70,23 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56480
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.005600 seconds.
-- Loaded All Assemblies, in  0.187 seconds
+Registered in 0.005496 seconds.
+- Loaded All Assemblies, in  0.184 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.147 seconds
-Domain Reload Profiling: 333ms
-	BeginReloadAssembly (59ms)
+- Finished resetting the current domain, in  0.146 seconds
+Domain Reload Profiling: 329ms
+	BeginReloadAssembly (58ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
@@ -95,24 +95,24 @@ Domain Reload Profiling: 333ms
 	RebuildCommonClasses (17ms)
 	RebuildNativeTypeToScriptingClass (6ms)
 	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (72ms)
-		LoadAssemblies (58ms)
+	LoadAllAssembliesAndSetupDomain (71ms)
+		LoadAssemblies (57ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (70ms)
 			TypeCache.Refresh (69ms)
 				TypeCache.ScanAssembly (62ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (147ms)
+	FinalizeReload (146ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (117ms)
+		SetupLoadedEditorAssemblies (116ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
+			InitializePlatformSupportModulesInManaged (9ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (77ms)
+			ProcessInitializeOnLoadAttributes (78ms)
 			ProcessInitializeOnLoadMethodAttributes (25ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -121,8 +121,8 @@ Domain Reload Profiling: 333ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.325 seconds
-Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.336 seconds
+Refreshing native plugins compatible for Editor in 1.61 ms, found 3 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -133,46 +133,46 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.324 seconds
-Domain Reload Profiling: 648ms
+Domain Reload Profiling: 659ms
 	BeginReloadAssembly (82ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (15ms)
+		CreateAndSetChildDomain (16ms)
 	RebuildCommonClasses (17ms)
 	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (198ms)
-		LoadAssemblies (153ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (207ms)
+		LoadAssemblies (159ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (91ms)
-			TypeCache.Refresh (79ms)
-				TypeCache.ScanAssembly (72ms)
+		AnalyzeDomain (93ms)
+			TypeCache.Refresh (81ms)
+				TypeCache.ScanAssembly (73ms)
 			ScanForSourceGeneratedMonoScriptInfo (8ms)
 			ResolveRequiredComponents (3ms)
 	FinalizeReload (324ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (244ms)
+		SetupLoadedEditorAssemblies (245ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
+			InitializePlatformSupportModulesInManaged (9ms)
 			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (33ms)
+			BeforeProcessingInitializeOnLoad (34ms)
 			ProcessInitializeOnLoadAttributes (187ms)
-			ProcessInitializeOnLoadMethodAttributes (11ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
 			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (3ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.42 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.94 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 45 unused Assets / (130.8 KB). Loaded Objects now: 3735.
-Memory consumption went from 129.8 MB to 129.7 MB.
-Total: 1.959200 ms (FindLiveObjects: 0.192000 ms CreateObjectMapping: 0.042600 ms MarkObjects: 1.635700 ms  DeleteObjects: 0.088500 ms)
+Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (130.4 KB). Loaded Objects now: 3772.
+Memory consumption went from 130.5 MB to 130.4 MB.
+Total: 2.196200 ms (FindLiveObjects: 0.178900 ms CreateObjectMapping: 0.053100 ms MarkObjects: 1.871200 ms  DeleteObjects: 0.092500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -190,22 +190,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 613279.824194 seconds.
-  path: Assets/Fonts/Changa/Changa-ExtraBold.ttf
-  artifactKey: Guid(dc51751bcc9147443be00710bdd87576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/Changa/Changa-ExtraBold.ttf using Guid(dc51751bcc9147443be00710bdd87576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1fbe83fc0d82584bae3e1dc940ba4c3') in 0.073787 seconds
+  Time since last request: 824459.568726 seconds.
+  path: Assets/Fonts/Changa/Changa-ExtraLight.asset
+  artifactKey: Guid(3f552bcbe757ea849ad910bb3509e0b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Changa/Changa-ExtraLight.asset using Guid(3f552bcbe757ea849ad910bb3509e0b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3dc46e6e54515f501a69166b4e1d843') in 0.074514 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Fonts/Changa/Changa-Regular.ttf
-  artifactKey: Guid(ffb273eba3e30d949b9d733bcd5a4f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/Changa/Changa-Regular.ttf using Guid(ffb273eba3e30d949b9d733bcd5a4f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd5da3dfc45982f2e26fe7e147ff08ff') in 0.008755 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 6
