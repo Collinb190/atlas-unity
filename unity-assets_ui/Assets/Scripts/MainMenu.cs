@@ -9,11 +9,15 @@ public class MainMenu : MonoBehaviour
         // Load the corresponding level scene
         string sceneName = "Level" + level.ToString("00");
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1.0f;
     }
 
     // Method to load the Options scene
     public void Options()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        SceneTracker.SetPreviousScene(currentScene.name);
         SceneManager.LoadScene("Options");
     }
 

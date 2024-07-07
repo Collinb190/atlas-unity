@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Timeline;
@@ -8,9 +9,10 @@ public class PlayerController : MonoBehaviour
     #region Fields
 
     public CharacterController controller;
-    public Transform cam;
+    public Transform cam; // Main cam 
     public Transform respawnPoint;
     public Transform groundCheck;
+    public CinemachineFreeLook freeLookCam; // Third Person Cam
     public LayerMask groundMask;
     public float fallThreshold = -10f;
     public float playerSpeed = 6f;
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float groundDistance = 0.4f;
     public float terminalVelocity = -60f;
     public bool isGrounded;
+    public bool invertYAxis = false; // test this
 
     private Vector3 velocity;
     private float turnSmoothVelocity;
@@ -35,6 +38,10 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         CheckFellOffWorld();
+        if (freeLookCam != null)
+        {
+            freeLookCam.m_YAxis.m_InvertInput = invertYAxis;
+        }
     }
 
     void HandleMovement()
