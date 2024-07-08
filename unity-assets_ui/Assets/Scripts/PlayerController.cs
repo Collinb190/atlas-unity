@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public float groundDistance = 0.4f;
     public float terminalVelocity = -60f;
     public bool isGrounded;
-    public bool invertYAxis = false; // test this
+    public bool isInverted;
 
     private Vector3 velocity;
     private float turnSmoothVelocity;
@@ -32,16 +32,20 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        isInverted = PlayerPrefs.GetInt("isInverted", 0) == 1;
     }
 
     void Update()
     {
         HandleMovement();
         CheckFellOffWorld();
-        if (freeLookCam != null)
-        {
-            freeLookCam.m_YAxis.m_InvertInput = invertYAxis;
-        }
+        InvertYAxis();
+    }
+
+    void InvertYAxis ()
+    {
+        freeLookCam.m_YAxis.m_InvertInput = isInverted;
+
     }
 
     void HandleMovement()
