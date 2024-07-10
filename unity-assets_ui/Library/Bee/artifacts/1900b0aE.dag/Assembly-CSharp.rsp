@@ -364,6 +364,7 @@
 "Assets/Scripts/SceneTracker.cs"
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/TimerTrigger.cs"
+"Assets/Scripts/WinMenu.cs"
 "Assets/Scripts/WinTrigger.cs"
 -langversion:9.0
 

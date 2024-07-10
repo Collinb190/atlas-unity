@@ -5,6 +5,9 @@ public class WinTrigger : MonoBehaviour
 {
     public Timer timerScript; // Reference to the Timer script
     public TextMeshProUGUI timerText; // Reference to the UI Text element for the timer
+    public TextMeshProUGUI finalTime;
+    public GameObject winCanvas;
+    public GameObject timerCanvas;
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,12 +15,27 @@ public class WinTrigger : MonoBehaviour
         {
             timerScript.StopTimer(); // Stop the timer
             UpdateTimerTextAppearance(); // Update the timer text appearance
+            ActivateWinMenu();
         }
     }
 
     private void UpdateTimerTextAppearance()
     {
-        timerText.fontSize = 60; // Increase the font size
-        timerText.color = Color.green; // Change the color to green
+        timerCanvas.SetActive(false);
+    }
+
+    public void ActivateWinMenu()
+    {
+        // Pause the game
+        Time.timeScale = 0f;
+
+        // Activate the pause menu
+        winCanvas.SetActive(true);
+
+        // Unlock and show the cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        finalTime.text = timerText.text;
     }
 }
