@@ -362,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939979299100252228}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.06433938, y: -0.0000000042926835, z: 2.7676203e-10, w: 0.9979281}
+  m_LocalRotation: {x: 0.06433938, y: 0.000000004292682, z: -2.7676195e-10, w: 0.9979281}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -748,7 +748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410646624693718883}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04622492, y: -0.000000017187986, z: 7.9536355e-10, w: 0.99893105}
+  m_LocalRotation: {x: 0.04622492, y: 0.000000017187991, z: -7.953638e-10, w: 0.99893105}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3044,6 +3044,7 @@ GameObject:
   - component: {fileID: 7570320560789446715}
   - component: {fileID: 1776836931167502501}
   - component: {fileID: 5805797815834676166}
+  - component: {fileID: 6397067114982134736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3138,6 +3139,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
+--- !u!114 &6397067114982134736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342262685257882432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175d56e862b782046a99c3983663a1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7353055490659314972
 GameObject:
   m_ObjectHideFlags: 0
