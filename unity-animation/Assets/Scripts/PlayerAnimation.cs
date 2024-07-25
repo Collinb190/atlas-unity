@@ -13,17 +13,37 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckGroundStatus();
         JumpAnimation();
+        RunAnimation();
+    }
+
+    void CheckGroundStatus()
+    {
+        // Check if grounded
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
 
     void JumpAnimation()
     {
-        // Check if grounded
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             animator.SetTrigger("isJumping");
+        }
+    }
+
+    void RunAnimation()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        if (isGrounded && (Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0))
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
     }
 }
