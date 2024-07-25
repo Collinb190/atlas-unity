@@ -26,8 +26,7 @@ public class PlayerAnimation : MonoBehaviour
     void CheckAnimations()
     {
         JumpAnimation();
-        RunAnimation();
-        IdleAnimation();
+        IdleOrRunAnimation();
     }
 
     void JumpAnimation()
@@ -38,39 +37,31 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    void IdleAnimation()
+    void IdleOrRunAnimation()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
         bool isMoving = Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0;
 
-        if (isGrounded && !isMoving)
+        if (isGrounded)
         {
-            animator.SetBool("isIdle", true);
-            animator.SetBool("isRunning", false);
+            if (isMoving)
+            {
+                animator.SetBool("isRunning", true);
+                animator.SetBool("isIdle", false);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isIdle", true);
+            }
         }
         else
         {
-            animator.SetBool("isIdle", false);
-        }
-    }
-
-    void RunAnimation()
-    {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        bool isMoving = Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0;
-
-        if (isGrounded && isMoving)
-        {
-            animator.SetBool("isRunning", true);
-            animator.SetBool("isIdle", false);
-        }
-        else
-        {
+            // Optional: Handle the case when not grounded
             animator.SetBool("isRunning", false);
+            animator.SetBool("isIdle", false);
         }
     }
 }
