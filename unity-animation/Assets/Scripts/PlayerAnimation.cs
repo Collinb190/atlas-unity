@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     public Animator animator;
+    public CharacterController characterController;
     public LayerMask groundMask;
     public Transform groundCheck;
+    public Transform respawnPoint;
     public float groundDistance = 0.4f;
     public bool isGrounded;
 
@@ -27,6 +29,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         JumpAnimation();
         IdleOrRunAnimation();
+        FallingAnimation();
     }
 
     void JumpAnimation()
@@ -64,4 +67,19 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetBool("isIdle", false);
         }
     }
+
+    void FallingAnimation()
+    {
+        Vector3 point = new Vector3(0, 1.26f, 0);
+        if (transform.position == respawnPoint.position)
+        {
+            animator.SetBool("isFalling", true);
+            animator.SetBool("isRunning", false);
+        }
+        if (transform.position == point)
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isFalling", false);
+        }
+    }    
 }

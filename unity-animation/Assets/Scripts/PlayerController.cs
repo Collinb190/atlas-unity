@@ -1,4 +1,5 @@
 using Cinemachine;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float terminalVelocity = -60f;
     public bool isGrounded;
     public bool isInverted;
+    public bool falling;
 
     private Vector3 velocity;
     private float turnSmoothVelocity;
@@ -95,11 +97,25 @@ public class PlayerController : MonoBehaviour
         // Check if you have fallen past the threshold & respawn
         if (transform.position.y <= fallThreshold)
         {
+            falling = true;
             transform.position = respawnPoint.position;
             velocity = Vector3.zero;
 
             // Additional actions upon respawn if needed
             // Example: Reset player health or other game-specific variables
+            playerSpeed = 0f;
+            StartCoroutine(ResetSpeed());
+        }
+    }
+
+    IEnumerator ResetSpeed()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        if (falling && isGrounded)
+        {
+            falling = false;
+            playerSpeed = 6f;
         }
     }
 }
