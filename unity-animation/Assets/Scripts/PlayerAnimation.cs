@@ -14,14 +14,20 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         CheckGroundStatus();
-        JumpAnimation();
-        RunAnimation();
+        CheckAnimations();
     }
 
     void CheckGroundStatus()
     {
         // Check if grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+    }
+
+    void CheckAnimations()
+    {
+        JumpAnimation();
+        RunAnimation();
+        IdleAnimation();
     }
 
     void JumpAnimation()
@@ -32,14 +38,35 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
+    void IdleAnimation()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        bool isMoving = Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0;
+
+        if (isGrounded && !isMoving)
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            animator.SetBool("isIdle", false);
+        }
+    }
+
     void RunAnimation()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        if (isGrounded && (Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0))
+        bool isMoving = Mathf.Abs(moveHorizontal) > 0 || Mathf.Abs(moveVertical) > 0;
+
+        if (isGrounded && isMoving)
         {
             animator.SetBool("isRunning", true);
+            animator.SetBool("isIdle", false);
         }
         else
         {
