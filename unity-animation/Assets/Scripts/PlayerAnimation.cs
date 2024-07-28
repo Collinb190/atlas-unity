@@ -71,10 +71,10 @@ public class PlayerAnimation : MonoBehaviour
     void FallingAnimation()
     {
         Vector3 point = new Vector3(0, 1.26f, 0);
+
         if (transform.position == respawnPoint.position)
         {
             animator.SetBool("isFalling", true);
-            animator.SetBool("isRunning", false);
         }
         if (transform.position == point)
         {
