@@ -78,7 +78,6 @@ public class PlayerAnimation : MonoBehaviour
         }
         if (transform.position == point)
         {
-            animator.SetBool("isIdle", true);
             animator.SetBool("isFalling", false);
         }
     }    
