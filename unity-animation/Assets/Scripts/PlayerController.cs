@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ResetSpeed()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(10f);
 
         if (falling && isGrounded)
         {

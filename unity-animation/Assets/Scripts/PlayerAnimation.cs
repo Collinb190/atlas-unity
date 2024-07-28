@@ -79,6 +79,8 @@ public class PlayerAnimation : MonoBehaviour
         if (transform.position == point)
         {
             animator.SetBool("isFalling", false);
+            animator.SetTrigger("isFlat");
+            animator.SetTrigger("isGettingUp");
         }
     }    
 }
