@@ -5,3 +5,16 @@ Skyboxes: Farland Skies - Cloudy Crown
 
 Models: Kenney's Nature Pack Extended
 [Download](https://www.kenney.nl/assets/nature-kit)
+
+Kenney:
+[Download](https://kenney.nl/)
+
+Oculus Audio Pack:
+[Download](https://developer.oculus.com/downloads/package/oculus-audio-pack-1/)
+
+Mindful Audio: 
+[Download](https://mindful-audio.com/)
+
+“Wallpaper”, “Cheery Monday” Kevin MacLeod ([Download](incompetech.com))
+Licensed under Creative Commons: By Attribution 3.0
+[Download](http://creativecommons.org/licenses/by/3.0/)
