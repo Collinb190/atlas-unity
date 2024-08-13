@@ -418,22 +418,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1932504784}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &84310741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1518,22 +1502,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1932504784}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &551744506 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5805797815834676166, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
@@ -2099,22 +2067,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1932504784}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &864711658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2394,7 +2346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16384722, y: 0.0000000068130963, z: -0.0000000011315997, w: 0.9864857}
+  m_LocalRotation: {x: 0.16384722, y: -0.0000000068130963, z: 0.0000000011315997, w: 0.9864857}
   m_LocalPosition: {x: 0, y: 6.960045, z: 19.22857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2883,22 +2835,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1851041864}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1932504784}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: Play
           m_Mode: 1
@@ -4130,11 +4066,6 @@ Transform:
   - {fileID: 248578404}
   m_Father: {fileID: 1966551044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1932504784 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2857869620236154671, guid: 1f4d89f1bcfee2d4486ddd1971d7aa99, type: 3}
-  m_PrefabInstance: {fileID: 1413945202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1934871574 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e237dd51c8c4a640bde2bd8b115c694, type: 3}
@@ -4667,11 +4598,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 663629119830612465, guid: 1fc98b10e875ba548938f4466e6ae2cc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008473753
+      value: 0.000000008473753
       objectReference: {fileID: 0}
     - target: {fileID: 663629119830612465, guid: 1fc98b10e875ba548938f4466e6ae2cc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000014867402
+      value: -0.0000000014867402
       objectReference: {fileID: 0}
     - target: {fileID: 1578839067283487334, guid: 1fc98b10e875ba548938f4466e6ae2cc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4767,11 +4698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3450322231583674725, guid: 1fc98b10e875ba548938f4466e6ae2cc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008499394
+      value: -0.000000008499394
       objectReference: {fileID: 0}
     - target: {fileID: 3450322231583674725, guid: 1fc98b10e875ba548938f4466e6ae2cc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000013323609
+      value: 0.0000000013323609
       objectReference: {fileID: 0}
     - target: {fileID: 3940168412129894364, guid: 1fc98b10e875ba548938f4466e6ae2cc, type: 3}
       propertyPath: m_FollowOffset.y
@@ -5201,11 +5132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 880092681339680866, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.559301
+      value: 3.079011
       objectReference: {fileID: 0}
     - target: {fileID: 880092681339680866, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -17.92062
+      value: -17.99747
       objectReference: {fileID: 0}
     - target: {fileID: 922091943830179396, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_IsActive
@@ -5257,11 +5188,11 @@ PrefabInstance:
       objectReference: {fileID: 1789357988}
     - target: {fileID: 2527221388825535084, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.559301
+      value: 3.079011
       objectReference: {fileID: 0}
     - target: {fileID: 2527221388825535084, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -17.92062
+      value: -17.99747
       objectReference: {fileID: 0}
     - target: {fileID: 3078924749276626751, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5329,11 +5260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5380781760468604931, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.559301
+      value: 3.079011
       objectReference: {fileID: 0}
     - target: {fileID: 5380781760468604931, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -17.92062
+      value: -17.99747
       objectReference: {fileID: 0}
     - target: {fileID: 5654751892064633535, guid: 1b927c3c88b9e614eab446fb9eb6fd63, type: 3}
       propertyPath: m_IsActive

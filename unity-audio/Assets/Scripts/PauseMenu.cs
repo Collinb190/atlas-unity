@@ -24,6 +24,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         // Pause the game
         Time.timeScale = 0f;
         isPaused = true;
@@ -38,6 +42,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         // Resume the game
         Time.timeScale = 1f;
         isPaused = false;
@@ -52,6 +60,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         // Reload the current scene
         Time.timeScale = 1f; // Ensure the game is not paused
         Scene currentScene = SceneManager.GetActiveScene();
@@ -60,11 +72,19 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         SceneManager.LoadScene("MainMenu");
-    }    
+    }
 
     public void Options()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         Scene currentScene = SceneManager.GetActiveScene();
 
         SceneTracker.SetPreviousScene(currentScene.name);

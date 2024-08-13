@@ -9,6 +9,10 @@ public class OptionsMenu : MonoBehaviour
     // Method to handle back button
     public void Back()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         string previousSceneName = SceneTracker.GetPreviousScene();
         if (!string.IsNullOrEmpty(previousSceneName))
         {
@@ -29,6 +33,10 @@ public class OptionsMenu : MonoBehaviour
 
     public void Invert()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         // Toggle isInverted
         isInverted = !isInverted;
 
@@ -36,6 +44,10 @@ public class OptionsMenu : MonoBehaviour
 
     public void Apply()
     {
+        //Handle Sound
+        AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        clickSound.PlayOneShot(clickSound.clip);
+
         // Save the new isInverted value to PlayerPrefs
         PlayerPrefs.SetInt("isInverted", isInverted ? 1 : 0);
 
