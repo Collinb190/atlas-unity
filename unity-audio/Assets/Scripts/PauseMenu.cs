@@ -72,18 +72,22 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        //Handle Sound
+        // Handle sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
         clickSound.PlayOneShot(clickSound.clip);
+        wallpaperSound.Play();
 
         SceneManager.LoadScene("MainMenu");
     }
 
     public void Options()
     {
-        //Handle Sound
+        // Handle sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
         clickSound.PlayOneShot(clickSound.clip);
+        wallpaperSound.Play();
 
         Scene currentScene = SceneManager.GetActiveScene();
 

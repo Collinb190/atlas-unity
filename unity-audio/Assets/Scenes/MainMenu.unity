@@ -2034,6 +2034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 1395136414103283368}
+  wallpaper: {fileID: 315614088}
 --- !u!1 &7713138065980614029
 GameObject:
   m_ObjectHideFlags: 0

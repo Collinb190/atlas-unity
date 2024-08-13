@@ -8,7 +8,9 @@ public class MainMenu : MonoBehaviour
     {
         // Handle sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
         clickSound.PlayOneShot(clickSound.clip);
+        wallpaperSound.Stop();
 
         // Load the corresponding level scene
         string sceneName = "Level" + level.ToString("00");

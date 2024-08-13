@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuSFX : MonoBehaviour
 {
     private static MenuSFX instance;
 
     public AudioSource click;
+    public AudioSource wallpaper;
 
     private void Awake()
     {
@@ -20,5 +22,10 @@ public class MenuSFX : MonoBehaviour
     public static AudioSource GetButtonClickSound()
     {
         return instance.click;
+    }
+
+    public static AudioSource WallpaperSoundControl()
+    {
+        return instance.wallpaper;
     }
 }
