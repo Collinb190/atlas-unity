@@ -7,6 +7,8 @@ public class MenuSFX : MonoBehaviour
 
     public AudioSource click;
     public AudioSource wallpaper;
+    public AudioSource grassRunning;
+    public AudioSource rockRunning;
 
     private void Awake()
     {
@@ -28,4 +30,15 @@ public class MenuSFX : MonoBehaviour
     {
         return instance.wallpaper;
     }
+
+    public static AudioSource RunningGrassSoundControl()
+    {
+        return instance.grassRunning;
+    }
+
+    public static AudioSource RunningRockSoundControl()
+    {
+        return instance.rockRunning;
+    }
+
 }
