@@ -10,14 +10,22 @@ public class MainMenu : MonoBehaviour
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
         AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
+        AudioSource porchSwingDaysSound = MenuSFX.PorchSwingDaysSoundControl();
+        AudioSource brittleRilleSound = MenuSFX.BrittleRilleSoundControl();
 
         clickSound.PlayOneShot(clickSound.clip);
         wallpaperSound.Stop();
 
         // Load the corresponding level scene
         string sceneName = "Level" + level.ToString("00");
+
         if (sceneName == "Level01")
             cheeryMondaySound.Play();
+        else if (sceneName == "Level02")
+            porchSwingDaysSound.Play();
+        else if (sceneName == "Level03")
+            brittleRilleSound.Play();
+
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
     }

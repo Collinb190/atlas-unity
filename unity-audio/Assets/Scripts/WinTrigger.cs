@@ -12,9 +12,16 @@ public class WinTrigger : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
+        AudioSource porchSwingDaysSound = MenuSFX.PorchSwingDaysSoundControl();
+        AudioSource brittleRilleSound = MenuSFX.BrittleRilleSoundControl();
+        AudioSource victoryPiano = MenuSFX.VictoryPianoSoundControl();
+
         if (other.CompareTag("Player"))
         {
             cheeryMondaySound.Stop();
+            porchSwingDaysSound.Stop();
+            brittleRilleSound.Stop();
+            victoryPiano.PlayOneShot(victoryPiano.clip);
             timerScript.StopTimer(); // Stop the timer
             UpdateTimerTextAppearance(); // Update the timer text appearance
             ActivateWinMenu();

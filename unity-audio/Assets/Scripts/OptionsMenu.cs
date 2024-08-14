@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,6 +14,8 @@ public class OptionsMenu : MonoBehaviour
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
         AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
+        AudioSource porchSwingDaysSound = MenuSFX.PorchSwingDaysSoundControl();
+        AudioSource brittleRilleSound = MenuSFX.BrittleRilleSoundControl();
         clickSound.PlayOneShot(clickSound.clip);
 
         string previousSceneName = SceneTracker.GetPreviousScene();
@@ -27,6 +30,10 @@ public class OptionsMenu : MonoBehaviour
 
                 if (previousSceneName.StartsWith("Level01"))
                     cheeryMondaySound.Play();
+                else if (previousSceneName.StartsWith("Level02"))
+                    porchSwingDaysSound.Play();
+                else if (previousSceneName.StartsWith("Level03"))
+                    brittleRilleSound.Play();
 
                 // Resume the game if returning to a level scene
                 Time.timeScale = 1f;

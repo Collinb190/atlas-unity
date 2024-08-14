@@ -63,16 +63,30 @@ public class PauseMenu : MonoBehaviour
         //Handle Sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
+        AudioSource porchSwingDaysSound = MenuSFX.PorchSwingDaysSoundControl();
+        AudioSource brittleRilleSound = MenuSFX.BrittleRilleSoundControl();
+
         clickSound.PlayOneShot(clickSound.clip);
 
         // Reload the current scene
         Time.timeScale = 1f; // Ensure the game is not paused
         Scene currentScene = SceneManager.GetActiveScene();
+
         if (currentScene.name == "Level01")
             cheeryMondaySound.Stop();
+        else if (currentScene.name == "Level02")
+            porchSwingDaysSound.Stop();
+        else if (currentScene.name == "Level03")
+            brittleRilleSound.Stop();
+
         SceneManager.LoadScene(currentScene.name);
+
         if (currentScene.name == "Level01")
             cheeryMondaySound.Play();
+        else if (currentScene.name == "Level02")
+            porchSwingDaysSound.Play();
+        else if (currentScene.name == "Level03")
+            brittleRilleSound.Play();
     }
 
     public void MainMenu()
@@ -81,7 +95,12 @@ public class PauseMenu : MonoBehaviour
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
         AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
+        AudioSource porchSwingDaysSound = MenuSFX.PorchSwingDaysSoundControl();
+        AudioSource brittleRilleSound = MenuSFX.BrittleRilleSoundControl();
+
         clickSound.PlayOneShot(clickSound.clip);
+        porchSwingDaysSound.Stop();
+        brittleRilleSound.Stop();
         cheeryMondaySound.Stop();
         wallpaperSound.Play();
 
@@ -94,7 +113,12 @@ public class PauseMenu : MonoBehaviour
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
         AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
+        AudioSource porchSwingDaysSound = MenuSFX.PorchSwingDaysSoundControl();
+        AudioSource brittleRilleSound = MenuSFX.BrittleRilleSoundControl();
+
         clickSound.PlayOneShot(clickSound.clip);
+        porchSwingDaysSound.Stop();
+        brittleRilleSound.Stop();
         cheeryMondaySound.Stop();
         wallpaperSound.Play();
 
