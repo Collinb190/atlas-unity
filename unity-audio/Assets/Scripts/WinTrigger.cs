@@ -11,8 +11,10 @@ public class WinTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
         if (other.CompareTag("Player"))
         {
+            cheeryMondaySound.Stop();
             timerScript.StopTimer(); // Stop the timer
             UpdateTimerTextAppearance(); // Update the timer text appearance
             ActivateWinMenu();

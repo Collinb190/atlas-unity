@@ -12,6 +12,7 @@ public class OptionsMenu : MonoBehaviour
         // Handle sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
+        AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
         clickSound.PlayOneShot(clickSound.clip);
 
         string previousSceneName = SceneTracker.GetPreviousScene();
@@ -23,6 +24,10 @@ public class OptionsMenu : MonoBehaviour
             if (previousSceneName.StartsWith("Level"))
             {
                 wallpaperSound.Stop();
+
+                if (previousSceneName.StartsWith("Level01"))
+                    cheeryMondaySound.Play();
+
                 // Resume the game if returning to a level scene
                 Time.timeScale = 1f;
             };

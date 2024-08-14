@@ -9,11 +9,15 @@ public class MainMenu : MonoBehaviour
         // Handle sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
+        AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
+
         clickSound.PlayOneShot(clickSound.clip);
         wallpaperSound.Stop();
 
         // Load the corresponding level scene
         string sceneName = "Level" + level.ToString("00");
+        if (sceneName == "Level01")
+            cheeryMondaySound.Play();
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
     }

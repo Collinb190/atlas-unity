@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     public Animator animator;
-    public CharacterController characterController;
+    //public CharacterController characterController;
     public LayerMask groundMask;
     public Transform groundCheck;
     public Transform respawnPoint;

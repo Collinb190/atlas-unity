@@ -62,12 +62,17 @@ public class PauseMenu : MonoBehaviour
     {
         //Handle Sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
+        AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
         clickSound.PlayOneShot(clickSound.clip);
 
         // Reload the current scene
         Time.timeScale = 1f; // Ensure the game is not paused
         Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "Level01")
+            cheeryMondaySound.Stop();
         SceneManager.LoadScene(currentScene.name);
+        if (currentScene.name == "Level01")
+            cheeryMondaySound.Play();
     }
 
     public void MainMenu()
@@ -75,7 +80,9 @@ public class PauseMenu : MonoBehaviour
         // Handle sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
+        AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
         clickSound.PlayOneShot(clickSound.clip);
+        cheeryMondaySound.Stop();
         wallpaperSound.Play();
 
         SceneManager.LoadScene("MainMenu");
@@ -86,7 +93,9 @@ public class PauseMenu : MonoBehaviour
         // Handle sound
         AudioSource clickSound = MenuSFX.GetButtonClickSound();
         AudioSource wallpaperSound = MenuSFX.WallpaperSoundControl();
+        AudioSource cheeryMondaySound = MenuSFX.CheeryMondaySoundControl();
         clickSound.PlayOneShot(clickSound.clip);
+        cheeryMondaySound.Stop();
         wallpaperSound.Play();
 
         Scene currentScene = SceneManager.GetActiveScene();
