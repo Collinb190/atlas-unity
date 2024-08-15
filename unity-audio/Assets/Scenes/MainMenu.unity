@@ -2893,6 +2893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6956493901118717012}
   - component: {fileID: 6956493901118717013}
+  - component: {fileID: 6956493901118717014}
   m_Layer: 0
   m_Name: MenuSFX
   m_TagString: Untagged
@@ -3075,6 +3076,21 @@ MonoBehaviour:
   rockRunning: {fileID: 993823091}
   rockThump: {fileID: 2002448708}
   victoryPiano: {fileID: 1906808593}
+--- !u!114 &6956493901118717014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878802143977451677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd3e6417a749c94e90a9c35545f64d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal: {fileID: 24500006, guid: cca91c2fae66b7749b5d438ca50934fc, type: 2}
+  main: MainMenu
+  options: Options
 --- !u!1 &7713138065980614029
 GameObject:
   m_ObjectHideFlags: 0
